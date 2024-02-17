@@ -32,9 +32,7 @@ module.exports = {
         ".lines li span":{
           "background-color":"black",
         },
-        "nav":{
-          "background-color":"white",
-        },
+
         "aside":{
           "background-color":"white",
         },
@@ -63,9 +61,10 @@ module.exports = {
                 ".lines li span":{
           "background-color":"linear-gradient(0deg,hsla(0,0%,100%,.3),hsla(0,0%,100%,0))",
         },
-        "nav":{
-          "background-color":"black",
-        },
+      ".nav-content":{
+        "background-color":"#2f8240",
+      },
+
         "aside":{
           "background-color":"#212121",
         },

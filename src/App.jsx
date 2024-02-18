@@ -1,21 +1,23 @@
-import './App.css'
-import { useTranslation } from 'react-i18next';
-import { Routes, Route } from 'react-router';
-import Home from './pages/Home';
-import NavBar from './components/NavBar';
+import "./App.css";
+import { useTranslation } from "react-i18next";
+import { Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
 function App() {
-const [t,i18n]=useTranslation()
+  const [t, i18n] = useTranslation();
   return (
     <>
-    <NavBar/>
-   <Routes>
-    <Route path='/' element={<Home/>}/>
-   </Routes>
+      <NavBar />
+      <Hero />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 /*
  <div className='flex items-center justify-center gap-[20px]'>
       <button onClick={()=>i18n.changeLanguage('ar')}>AR</button>

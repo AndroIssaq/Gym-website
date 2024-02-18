@@ -2,46 +2,78 @@
 import { FaWallet } from "react-icons/fa6";
 import { PiHeartbeatFill } from "react-icons/pi";
 
-const infos=[{number:'1.5K',title:'Happy Members'},{number:'2.5M',title:'Calories Burnt'},{number:'3K',title:'Hours Trained'},{number:'10',title:'Fitness Trainers'}]
+const infos = [
+  { number: "1.5K", title: "Happy Members" },
+  { number: "2.5M", title: "Calories Burnt" },
+  { number: "3K", title: "Hours Trained" },
+  { number: "10", title: "Fitness Trainers" },
+];
 const Hero = () => {
   return (
     <section className="w-full justify-center items-center flex flex-col mt-8 ">
       <div className="w-[95%] rounded-t-xl nav-content flex  p-[25px]">
-          {/* Upper Div */}
-          <div className="content w-full flex lg:flex-row md:flex-row sm:flex-col-reverse  flex-col-reverse  gap-12 lg:gap-0  ">
-            {/* Text */}
-            <div className="flex flex-1 flex-col  gap-[20px] justify-center">
-              <h2 className="lg:text-[35px] text-[25px] text-[#8CE91C]">
-                get ready
-              </h2>
-              <p className="lg:text-[70px] text-[40px] tracking-wider">
-                we are going to
-                <span className="text-[#8CE91C]"> transform you!</span>
-              </p>
-              <button className=" hover:drop-shadow-lg duration-300 w-fit px-[32px] py-[16px] bg-[#8CE91C] rounded-full text-black/75 text-[25px] md:text-xl hover:bg-[#8CE91C]/60">
-                view classes
-              </button>
+        {/* Upper Div */}
+        <div className="content w-full flex lg:flex-row md:flex-row  flex-col-reverse gap-12 lg:gap-0  ">
+          {/* Text */}
+          <div className="flex flex-1 flex-col gap-[20px] justify-center">
+            <h2 className="lg:text-[35px] text-[25px] text-[#8CE91C]">
+              get ready
+            </h2>
+            <p className="lg:text-[70px] text-[40px] tracking-wider">
+              we are going to
+              <span className="text-[#8CE91C]"> transform you!</span>
+            </p>
+            <button className=" hover:drop-shadow-lg duration-300 w-fit px-[32px] py-[16px] bg-[#8CE91C] rounded-full text-black/75 text-[25px] md:text-xl hover:bg-[#8CE91C]/60">
+              view classes
+            </button>
+          </div>
+
+          {/* image here*/}
+          <div className=" flex flex-1 justify-center items-center w-full h-full sm:mb-0 md:mb-20 transition-all duration-300 relative">
+            <div className="sm:w-[400px] sm:h-[362px] md:w-[400px] md:h-[600px] xl:w-[600px] xl:h-[600px] flex justify-center items-center relative ">
+              <img
+                src="download.jpeg"
+                alt=""
+                className="absolute w-full h-full object-cover z-20 rounded-xl"
+              />
+              <div className="absolute w-full h-full bg-black rotate-[-3deg] z-[5] rounded-xl"></div>
+              <div className="absolute w-full h-full bg-white rotate-[-5deg] z-[2] rounded-xl"></div>
+            </div>
+            <div className="hidden w-fit px-2 py-3 rounded-xl bg-white xl:flex absolute justify-center items-center gap-x-2 z-[30] top-[100px] right-[-30px]">
+              <div className="p-2 flex gap-x-2 text-lg bg-green-900 rounded-sm justify-center items-center text-[#8CE91C]">
+                <FaWallet />
+                <h2 className="text-[#8CE91C] ">50% off</h2>
+              </div>
+              <h2 className="text-black/60 text-xl">for the first month</h2>
             </div>
 
-            {/* image here*/}
+            <div className="hidden w-fit px-2 py-3 rounded-xl bg-white xl:flex absolute justify-center items-center gap-x-2 z-[40] bottom-[104px] left-[-40px]">
+              <div className="p-2 flex gap-x-2 text-lg bg-green-900 rounded-sm justify-center items-center text-[#8CE91C]">
+                <PiHeartbeatFill />
+                <h2 className="text-[#8CE91C] ">free</h2>
+              </div>
+              <h2 className="text-black/60 text-xl">Health Assessment</h2>
+            </div>
+          </div>
         </div>
       </div>
 
-       {/* Bottom Div */}
-       <div className="info w-full  flex items-center justify-center">
-          <div className="content w-[95%]  bg-[#162617]  rounded-b-xl  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2   gap-[20px] px-[20px] py-[50px] ">
-            {
-              infos.map((info,index)=>{
-                return(
-                  <div key={index} className="flex  lg:flex-row md:flex-row sm:flex-col flex-col  items-start justify-center xl:text-[35px] lg:text-[30px] md:text-[25px]  sm:text-[25px] text-[25px] leading-10 gap-1 md:gap-5 ">
-                  <h2 className="text-[#8CE91C]">{info.number}</h2>
-                  <h2>{info.title}</h2>
-                </div>
-                )
-              })
-            }
-          </div>
+      {/* Bottom Div */}
+      <div className="info w-full  flex items-center justify-center">
+        <div className="content w-[95%]  bg-[#162617]  rounded-b-xl  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2   gap-[20px] px-[20px] py-[50px] ">
+          {infos.map((info, index) => {
+            return (
+              <div
+                key={index}
+                className="flex  lg:flex-row md:flex-row sm:flex-col flex-col  items-start justify-center xl:text-[35px] lg:text-[30px] md:text-[25px]  sm:text-[25px] text-[25px] leading-10 gap-1 md:gap-5 "
+              >
+                <h2 className="text-[#8CE91C]">{info.number}</h2>
+                <h2>{info.title}</h2>
+              </div>
+            );
+          })}
         </div>
+      </div>
     </section>
   );
 };

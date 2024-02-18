@@ -30,7 +30,7 @@ const Hero = () => {
 
           {/* image here*/}
           <div className=" flex flex-1 justify-center items-center w-full h-full sm:mb-0 md:mb-20 transition-all duration-300 relative">
-            <div className="sm:w-[400px] sm:h-[362px] md:w-[400px] md:h-[600px] xl:w-[600px] xl:h-[600px] flex justify-center items-center relative ">
+            <div className="w-[400px] h-[300px] sm:w-[400px] sm:h-[362px] md:w-[400px] md:h-[600px] xl:w-[600px] xl:h-[600px] flex justify-center items-center relative ">
               <img
                 src="download.jpeg"
                 alt=""

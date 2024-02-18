@@ -2,20 +2,22 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {IoMenuOutline} from 'react-icons/io5'
 import {FaFacebookF,FaLinkedinIn,FaBehance,FaTwitter} from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 const NavBar = () => {
+  const [t,i18n]=useTranslation()
   const [openMenu,setOpenMenu]=useState(false)
+  console.log(t('navbarlinks'));
   return (
     <>
     <nav className='w-full mt-[20px] relative flex items-center justify-center '>
         <div className="nav-content rounded-xl p-[20px] w-[95%] flex items-center justify-between h-[70px]">
             <Link to={'/'}><div className="text-[40px]">GYM</div></Link>
             <ul className='links text-[20px]  items-center gap-[20px] lg:flex md:flex sm:hidden hidden relative'>
-                <Link to={'/'}><li><a href="">Home</a></li></Link> 
+                <Link to={'/'}><li><a href="">{t('navbarlinks')}</a></li></Link> 
                 <Link to={'/ourteam'}><li><a href="">Our Team</a></li></Link>
                 <Link to={'/portfolio'}><li><a href="">Portfolio</a></li></Link>
                 <Link to={'/contactus'}><li><a href="">Contact Us</a></li></Link>
             </ul>
-
             <button onClick={()=>setOpenMenu(!openMenu)} className='lg:hidden md:hidden sm:block block text-[35px]'><IoMenuOutline/></button>
     </div>
 </nav>

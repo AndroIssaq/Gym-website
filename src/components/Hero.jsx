@@ -56,7 +56,7 @@ useEffect(() => {
               <img
                 src={img}
                 alt=""
-                className="absolute w-full h-full object-cover z-20 rounded-xl"
+                className="absolute w-full h-full object-cover md:object-fill z-20 rounded-xl"
               />
               <div className="absolute w-full h-full bg-[#66f138d3] rotate-[-3deg] z-[5] rounded-xl"></div>
               <div className="absolute w-full h-full bg-[#91dc2fbc] rotate-[-5deg] z-[2] rounded-xl"></div>

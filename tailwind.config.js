@@ -45,9 +45,7 @@ module.exports = {
         "h1": {
           "color":"#f8f8f821"
         },
-        "p": {
-          "color":"#fff"
-        },
+
         ".mood":{
           "background-color":"white",
           "color":"black"

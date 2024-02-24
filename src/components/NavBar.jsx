@@ -6,19 +6,26 @@ import { useTranslation } from 'react-i18next'
 const NavBar = () => {
   const [t,i18n]=useTranslation()
   const [openMenu,setOpenMenu]=useState(false)
-  console.log(t('navbarlinks'));
+  const lang=i18n.language
   return (
     <>
     <nav className='w-full mt-[20px] relative flex items-center justify-center '>
-        <div className="nav-content rounded-xl p-[20px] w-[95%] flex items-center justify-between h-[70px]">
-            <Link to={'/'}><div className="text-[40px]">GYM</div></Link>
+        <div className={` bg-[#353434] ${lang==='ar'?'flex-row-reverse':'flex-row'}  rounded-xl p-[20px] w-[95%] flex items-center justify-between h-[70px]`}>
+            <Link to={'/'}><div className="text-[40px]">{t('Logo')}</div></Link>
             <ul className='links text-[20px]  items-center gap-[20px] lg:flex md:flex sm:hidden hidden relative'>
-                <Link to={'/'}><li><a href="">{t('navbarlinks')}</a></li></Link> 
-                <Link to={'/ourteam'}><li><a href="">Our Team</a></li></Link>
-                <Link to={'/portfolio'}><li><a href="">Portfolio</a></li></Link>
-                <Link to={'/contactus'}><li><a href="">Contact Us</a></li></Link>
+                <Link to={'/'}><li><a href="">{t('Home')}</a></li></Link> 
+                <Link to={'/ourteam'}><li><a href="">{t('OurTeam')}</a></li></Link>
+                <Link to={'/portfolio'}><li><a href="">{t('Portfolio')}</a></li></Link>
+                <Link to={'/contactus'}><li><a href="">{t('ContactUs')}</a></li></Link>
             </ul>
+            <div className='flex items-center justify-center gap-[20px]'>
+            <select onChange={(e)=>i18n.changeLanguage(e.target.value) }  className="select rounded-xl bg-[#fff] w-[70px] max-w-xs text-[#000]">
+              <option value={'en'}>EN</option>
+              <option value={'ar'}>AR</option>
+            </select>
             <button onClick={()=>setOpenMenu(!openMenu)} className='lg:hidden md:hidden sm:block block text-[35px]'><IoMenuOutline/></button>
+            </div>
+            
     </div>
 </nav>
 

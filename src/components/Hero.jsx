@@ -56,7 +56,7 @@ const Hero = () => {
               lang === "ar" ? "items-end text-end" : "text-start items-start"
             } `}
           > 
-            <h2 className="lg:text-[35px] text-[25px] text-[#8CE91C]">
+            <h2 className="lg:tex`t-[35px] text-[25px] text-[#8CE91C]">
               {lang === "en"
                 ? data[0]?.fields?.headerEn
                 : data[0]?.fields?.headerAr}

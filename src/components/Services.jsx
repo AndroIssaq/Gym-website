@@ -33,8 +33,9 @@ const Services = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const [i18n] = useTranslation();
+  const {i18n} = useTranslation();
   const lang = i18n.language;
+  console.log(lang);
 
   return (
     <section className="w-full mt-[120px] h-min flex justify-center items-center ">

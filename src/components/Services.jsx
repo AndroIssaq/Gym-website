@@ -32,14 +32,17 @@ const Services = () => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const {i18n} = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language;
   console.log(lang);
 
   return (
     <section className="w-full mt-[120px] h-min flex justify-center items-center ">
-      <div className="gap-12 h-min w-[95%] py-[70px] md:py-[120px] px-[16px] md:px-[32px] flex flex-col md:flex-row rounded-2xl justify-center bg-green-900">
+      <div
+        className={`gap-12 h-min w-[95%] py-[70px] md:py-[120px] px-[16px] md:px-[32px] flex ${
+          lang === "ar" ? "md:flex-row-reverse" : "md:flex-row"
+        } flex-col rounded-2xl justify-center bg-green-900`}
+      >
         {/* Left */}
         <div
           className={` flex flex-col flex-1 self-start gap-6 md:sticky top-[80px] ${
@@ -66,7 +69,11 @@ const Services = () => {
         <div className="flex-1 grid grid-cols-2 gap-[55px]">
           {/* col-1 */}
           <div className="flex flex-col gap-9">
-            <div className="flex flex-col gap-5">
+            <div
+              className={`flex flex-col gap-5 ${
+                lang === "ar" ? "text-end items-end" : "items-start text-start"
+              }`}
+            >
               <FaDumbbell className="text-2xl text-green-500" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
@@ -80,7 +87,11 @@ const Services = () => {
               </h2>
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div
+              className={`flex flex-col gap-5 ${
+                lang === "ar" ? "text-end items-end" : "items-start text-start"
+              }`}
+            >
               <PiEggCrackBold className="text-2xl text-green-500" />
               <h2 className="text-[25px] text-white">
                 {" "}
@@ -95,7 +106,11 @@ const Services = () => {
               </h2>
             </div>
 
-            <div className="flex flex-col gap-5">
+            <div
+              className={`flex flex-col gap-5 ${
+                lang === "ar" ? "text-end items-end" : "items-start text-start"
+              }`}
+            >
               <BsListCheck className="text-2xl text-green-500" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
@@ -112,7 +127,11 @@ const Services = () => {
 
           {/* col-2 */}
           <div className="flex flex-col gap-9">
-            <div className="flex flex-col gap-5">
+            <div
+              className={`flex flex-col gap-5 ${
+                lang === "ar" ? "text-end items-end" : "items-start text-start"
+              }`}
+            >
               <GrGroup className="text-2xl text-green-500" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
@@ -125,7 +144,11 @@ const Services = () => {
                   : data[0]?.fields?.serviceDes4ar}
               </h2>
             </div>
-            <div className="flex flex-col gap-5">
+            <div
+              className={`flex flex-col gap-5 ${
+                lang === "ar" ? "text-end items-end" : "items-start text-start"
+              }`}
+            >
               <IoMdHeartHalf className="text-2xl text-green-500" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
@@ -138,7 +161,11 @@ const Services = () => {
                   : data[0]?.fields?.serviceDes5ar}
               </h2>
             </div>
-            <div className="flex flex-col gap-5">
+            <div
+              className={`flex flex-col gap-5 ${
+                lang === "ar" ? "text-end items-end" : "items-start text-start"
+              }`}
+            >
               <FaComputer className="text-2xl text-green-500" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"

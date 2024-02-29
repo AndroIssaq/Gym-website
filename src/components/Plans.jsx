@@ -68,7 +68,11 @@ const Plans = () => {
 
         {/* Cards */}
         <div
-          className={`flex justify-center items-center gap-10 flex-col lg:flex-row`}
+          className={`flex justify-center items-center gap-10 ${
+            lang === "en"
+              ? "flex-col lg:flex-row"
+              : "flex-col lg:flex-row-reverse"
+          } `}
         >
           {/* Card 1 */}
           <div

@@ -49,7 +49,7 @@ const Services = () => {
             lang === "ar" ? "items-end text-end" : "items-start"
           } `}
         >
-          <h2 className="text-[40px] md:w-[60%]">
+          <h2 className="text-[40px] md:w-[60%] text-[#8CE91C]">
             {lang === "en"
               ? data[0]?.fields?.headerEn
               : data[0]?.fields?.headerAr}

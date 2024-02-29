@@ -1,6 +1,7 @@
 import Features from "../components/Features";
 import Hero from "../components/Hero";
 import OurClasses from "../components/OurClasses";
+import Plans from "../components/Plans";
 import Services from "../components/Services";
 const Home = () => {
   return (
@@ -8,7 +9,8 @@ const Home = () => {
       <Hero />
       <Features />
       <Services />
-      <OurClasses/>
+      <OurClasses />
+      <Plans />
     </div>
   );
 };

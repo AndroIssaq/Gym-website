@@ -83,19 +83,19 @@ const Features = () => {
         </div>
 
         {/* Images */}
-        <div className="w-full relative overflow-hidden h-[250px] md:h-[430px] lg:h-[540px] xl:h-[650px] 2xl:h-[830px]">
+        <div className="w-full relative overflow-hidden h-[350px] sm:h-[430px] md:h-[430px] lg:h-[540px] xl:h-[650px] 2xl:h-[830px]">
           <div className=" absolute  left-0 top-0 w-[65%] sm:w-[75%] md:w-[55%]">
             <img
               src="gym.jpeg"
               alt=""
-              className="w-full h-full object-contain rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl"
             />
           </div>
           <div className="absolute right-0 bottom-0 w-[65%] sm:w-[75%] md:w-[55%]  ">
             <img
               src="gym1.jpeg"
               alt=""
-              className="w-full h-full object-contain rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl"
             />
           </div>
         </div>

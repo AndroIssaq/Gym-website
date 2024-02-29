@@ -16,9 +16,6 @@ module.exports = {
           "h1": {
             "color":"#4b4a4ab5"
           },
-          "p": {
-            "color":"black"
-          },
           ".mood":{
             "background-color":"black",
             "color":"white"
@@ -43,7 +40,7 @@ module.exports = {
         ...require("daisyui/src/theming/themes")["black"],
 
         "h1": {
-          "color":"#f8f8f821"
+          "color":"#fff"
         },
 
         ".mood":{

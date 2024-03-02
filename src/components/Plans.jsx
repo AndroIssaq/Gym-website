@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
+import Title from "./Title";
 
 const Plans = () => {
   const [plan, setPlan] = useState("monthly");
-
   const [data, setData] = useState([]);
   const client = createClient({
     space: "4i5bqb3u6o2i",
@@ -32,14 +32,13 @@ const Plans = () => {
   const lang = i18n.language;
 
   return (
-    <section className="w-full mt-[120px] flex justify-center items-center">
+    <section className="w-full my-[50px] flex justify-center items-center">
       <div className="w-[95%] flex flex-col justify-center items-center gap-8 px-[50px] overflow-hidden">
         {/* Title */}
-        <h2 className="text-[#8CE91C] text-[45px]">
-          {lang === "en"
+        <Title  title= {lang === "en"
             ? data[0]?.fields?.headerEn
             : data[0]?.fields?.headerAr}
-        </h2>
+        />
 
         {/* Plans */}
         <div className="flex gap-2 border-2 rounded-lg">

@@ -18,7 +18,6 @@ const OurClasses = () => {
       const response = await client.getEntries({
         content_type: "ourClasses",
       });
-      console.log(response);
       setData(response.items);
     } catch (error) {
       console.log(error);
@@ -31,7 +30,6 @@ const OurClasses = () => {
   }, []);
   const [t, i18n] = useTranslation();
   const lang = i18n.language;
-  console.log(data);
 
   return (
     <section className="mt-[50px]">

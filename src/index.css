@@ -12,7 +12,7 @@
 }
 
 body{
-    height: 10000px;
+    
 }
 
 .container{
@@ -60,4 +60,10 @@ nav ul li:hover::after{
 }
 .mobile-nav ul li{
  color: white;
+}
+input{
+    background:#fff;
+}
+textarea{
+    background:#fff; 
 }

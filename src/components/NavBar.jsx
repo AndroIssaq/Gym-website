@@ -29,14 +29,14 @@ const NavBar = () => {
                 <a href="">{t("Home")}</a>
               </li>
             </Link>
-            <Link to={"/ourteam"}>
+            <Link to={"/AboutUs"}>
               <li>
-                <a href="">{t("OurTeam")}</a>
+                <a href="">{t("About Us")}</a>
               </li>
             </Link>
-            <Link to={"/portfolio"}>
+            <Link to={"/Services"}>
               <li>
-                <a href="">{t("Portfolio")}</a>
+                <a href="">{t("Services")}</a>
               </li>
             </Link>
             <Link to={"/contactus"}>

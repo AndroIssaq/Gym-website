@@ -1,8 +1,8 @@
 {
     "Logo": "ورلد جيم",
     "Home": "الصفحة الرئيسية",
-    "OurTeam": "فريقنا",
-    "Portfolio": "معرض صورنا ",
+    "Services": "خدماتنا",
+    "About Us": "عن ورلد جيم",
     "ContactUs": "تواصل معنا ",
     "for the first month": "لاول شهر ",
     "free": "مجانا",
@@ -15,8 +15,7 @@
     "Commitment to Health": "الالتزام بالصحة",
     "Diverse Classes": "فصول متنوعة",
     "Expert Trainers": "مدربون خبراء",
-    "Our Classes Section Tilte": "حصصنا التدريبية",
-    "Our Classes Section Des": "استكشف مجموعتنا المتنوعة من فصول اللياقة البدنية المصممة لتلبية أهدافك واهتماماتك المحددة.",
-    "Our Classes Section show More Button": "شاهد المزيد",
-    "Transform Your Body Transform Your Life": " حول جسمك ، غير حياتك"
+    "Our Classes Section Tilte":"حصصنا التدريبية",
+    "Our Classes Section Des":"استكشف مجموعتنا المتنوعة من فصول اللياقة البدنية المصممة لتلبية أهدافك واهتماماتك المحددة.",
+    "Our Classes Section show More Button":"شاهد المزيد"
 }

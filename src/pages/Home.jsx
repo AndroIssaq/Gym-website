@@ -3,13 +3,16 @@ import Hero from "../components/Hero";
 import OurClasses from "../components/OurClasses";
 import Plans from "../components/Plans";
 import Services from "../components/Services";
-import Video from "../components/Video";
 const Home = () => {
   return (
     <div>
       <Hero />
-      <Features />
+      <AboutCeo/>
       <Services />
+      <div className="my-[50px]">
+      <InfiniteMovingCardsDemo/>
+      </div>
+      <Features />
       <OurClasses />
       <Plans />
       <Video />

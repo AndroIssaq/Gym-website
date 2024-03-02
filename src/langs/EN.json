@@ -1,8 +1,8 @@
 {
     "Logo": "WORLD GYM",
     "Home": "Home",
-    "OurTeam": "Our Team",
-    "Portfolio": "Portfolio",
+    "Services": "Services",
+    "About Us": "About Us",
     "ContactUs": "Contact Us",
     "Offer": "50% OFF",
     "for the first month": "for the first month",
@@ -16,8 +16,7 @@
     "Commitment to Health": "Commitment to Health",
     "State-of-the-Art Facilities": "State-of-the-Art Facilities",
     "Personalized Approach": "Personalized Approach",
-    "Our Classes Section Tilte": "Our Classes",
-    "Our Classes Section Des": "Explore our diverse range of fitness classes designed to meet your specific goals and interests.",
-    "Our Classes Section show More Button": "Show More",
-    "Transform Your Body Transform Your Life": "Transform Your Body, Transform Your Life"
+    "Our Classes Section Tilte":"Our Classes",
+    "Our Classes Section Des":"Explore our diverse range of fitness classes designed to meet your specific goals and interests.",
+    "Our Classes Section show More Button":"Show More"
 }

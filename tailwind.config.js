@@ -7,8 +7,24 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/App.{js,ts,jsx,tsx,mdx}',
   ],
+  theme:{
+    extend: {
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
+    },
+  },
   daisyui: {
     themes: [
+      
       {
         lofi: {
           ...require("daisyui/src/theming/themes")["lofi"],
@@ -68,6 +84,6 @@ module.exports = {
   }
     ],
   },
-
+  
   plugins: [require("daisyui")],
 }

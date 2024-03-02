@@ -1,8 +1,8 @@
 {
     "Logo": "ورلد جيم",
     "Home": "الصفحة الرئيسية",
-    "OurTeam": "فريقنا",
-    "Portfolio": "معرض صورنا ",
+    "Services": "خدماتنا",
+    "About Us": "عن ورلد جيم",
     "ContactUs": "تواصل معنا ",
     "for the first month": "لاول شهر ",
     "free": "مجانا",
@@ -17,5 +17,6 @@
     "Expert Trainers": "مدربون خبراء",
     "Our Classes Section Tilte":"حصصنا التدريبية",
     "Our Classes Section Des":"استكشف مجموعتنا المتنوعة من فصول اللياقة البدنية المصممة لتلبية أهدافك واهتماماتك المحددة.",
-    "Our Classes Section show More Button":"شاهد المزيد"
+    "Our Classes Section show More Button":"شاهد المزيد",
+    "About Ceo Section Title":"حول الرئيس التنفيذي"
 }

@@ -1,7 +1,4 @@
 import Title from "./Title";
-import img1 from "../assets/team1.webp";
-import img2 from "../assets/team2.webp";
-import img3 from "../assets/team3.webp";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
@@ -17,7 +14,7 @@ const OurTeam = () => {
   const getData = async () => {
     try {
       const response = await client.getEntries({
-        content_type: "aboutUs",
+        content_type: "aboutUsTeamSection",
       });
       console.log(response);
       setData(response.items);
@@ -35,7 +32,7 @@ const OurTeam = () => {
 
   const team = [
     {
-      img: img1,
+      img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
       name: `${
         lang === "en" ? data[0]?.fields?.coach1En : data[0]?.fields?.coach1Ar
       }`,
@@ -46,7 +43,7 @@ const OurTeam = () => {
       }`,
     },
     {
-      img: img2,
+      img: `${data[0]?.fields?.img2?.fields?.file?.url}`,
       name: `${
         lang === "en" ? data[0]?.fields?.coach2En : data[0]?.fields?.coach2Ar
       }`,
@@ -57,14 +54,14 @@ const OurTeam = () => {
       }`,
     },
     {
-      img: img3,
+      img: `${data[0]?.fields?.img3?.fields?.file?.url}`,
       name: `${
         lang === "en" ? data[0]?.fields?.coach3En : data[0]?.fields?.coach3Ar
       }`,
       title: `${
         lang === "en"
           ? data[0]?.fields?.coach3DeskEn
-          : data[0]?.fields?.coac3DeskAr
+          : data[0]?.fields?.coach3DeskAr
       }`,
     },
   ];
@@ -73,9 +70,7 @@ const OurTeam = () => {
       <div className="container">
         <Title
           title={`${
-            lang === "en"
-              ? data[0]?.fields?.ourTeamEn
-              : data[0]?.fields?.ourTeamAr
+            lang === "en" ? data[0]?.fields?.titleEn : data[0]?.fields?.titleAr
           }`}
         />
         <div className="content bg-[#22c55e] " />

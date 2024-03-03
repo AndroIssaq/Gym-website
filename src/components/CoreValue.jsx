@@ -18,7 +18,7 @@ const CoreValue = () => {
   const getData = async () => {
     try {
       const response = await client.getEntries({
-        content_type: "aboutUs",
+        content_type: "aboutUsCoreValueSection",
       });
       console.log(response);
       setData(response.items);
@@ -86,8 +86,8 @@ const CoreValue = () => {
         <Title
           title={`${
             lang === "en"
-              ? data[0]?.fields?.valuesEn
-              : data[0]?.fields?.valuesAr
+              ? data[0]?.fields?.titleEn
+              : data[0]?.fields?.titleAr
           }`}
         />
         <div className=" grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8  ">

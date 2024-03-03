@@ -2,7 +2,7 @@ import Title from "./Title";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+
 const AboutCeo = () => {
   const [t, i18n] = useTranslation();
   const lang = i18n.language;

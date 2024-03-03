@@ -12,7 +12,7 @@ const FlexComponent = ({ img, title, des, flexRow }) => {
             flexRow
               ? "flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col items-center justify-center"
               : "flex xl:flex-row-reverse lg:flex-row-reverse md:flex-row-reverse sm:flex-col flex-col items-center justify-center"
-          }  gap-8`}
+          } gap-8`}
         >
           <div className={`flex-1 p-[30px] ${lang === "ar" && "text-end"}`}>
             <h1 className="  text-6xl font-bold leading-tight mb-4">{title}</h1>

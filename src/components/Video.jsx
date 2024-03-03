@@ -19,7 +19,7 @@ const Video = () => {
           "
         >
           <source
-            src="/public/production_id-4110674 (2160p).mp4"
+            src="/production_id-4110674 (2160p).mp4"
             type="video/mp4"
           />
         </video>

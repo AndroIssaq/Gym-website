@@ -1,4 +1,3 @@
-import img from "../assets/pexels-the-lazy-artist-gallery-2247179.jpg";
 import FlexComponent from "../components/FlexComponent";
 import CoreValue from "../components/CoreValue";
 import OurTeam from "../components/OurTeam";
@@ -18,10 +17,11 @@ const AboutUs = () => {
   const getData = async () => {
     try {
       const response = await client.getEntries({
-        content_type: "aboutUs",
+        content_type: "aboutUsTitleSection",
       });
       console.log(response);
       setData(response.items);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -37,9 +37,9 @@ const AboutUs = () => {
   return (
     <>
       <main className="flex flex-col items-center justify-center gap-[50px]">
-        <FlexComponent 
+        <FlexComponent
           flexRow={true}
-          img={img}
+          img={data[0]?.fields?.img1?.fields?.file?.url}
           title={`${
             lang === "en"
               ? data[0]?.fields?.title1En
@@ -51,16 +51,14 @@ const AboutUs = () => {
         />
         <FlexComponent
           flexRow={false}
-          img={img}
+          img={data[0]?.fields?.img2?.fields?.file?.url}
           title={`${
             lang === "en"
               ? data[0]?.fields?.title2En
               : data[0]?.fields?.title2Ar
           }`}
           des={`${
-            lang === "en"
-              ? data[0]?.fields?.desk2En
-              : data[0]?.fields?.desk2Ar
+            lang === "en" ? data[0]?.fields?.desk2En : data[0]?.fields?.desk2Ar
           }`}
         />
         <CoreValue />

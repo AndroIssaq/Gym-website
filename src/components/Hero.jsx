@@ -5,6 +5,7 @@ import { PiHeartbeatFill } from "react-icons/pi";
 import img from "../assets/pexels-the-lazy-artist-gallery-2247179.jpg";
 import { useTranslation } from "react-i18next";
 import { createClient } from "contentful";
+import Button from "./Button";
 
 const Hero = () => {
   const [data, setData] = useState([]);
@@ -41,7 +42,7 @@ const Hero = () => {
 
   return (
     <section className="w-full justify-center items-center flex flex-col mt-8 ">
-      <div className=" w-[95%] rounded-t-xl bg-[#353434] flex  p-[25px]">
+      <div className=" w-[95%] rounded-t-xl bg-secondColor flex  p-[25px]">
         {/* Upper Div */}
         <div
           className={`${
@@ -56,21 +57,19 @@ const Hero = () => {
               lang === "ar" ? "items-end text-end" : "text-start items-start"
             } `}
           > 
-            <h2 className="lg:tex`t-[35px] text-[25px] text-[#8CE91C]">
+            <h2 className="lg:tex`t-[35px] text-[25px] text-mainColor">
               {lang === "en"
                 ? data[0]?.fields?.headerEn
                 : data[0]?.fields?.headerAr}
             </h2>
-            <p className=" text-[#8CE91C] lg:text-[70px] text-[40px] tracking-wider">
+            <p className=" text-[#fff] lg:text-[70px] text-[40px] tracking-wider">
               {lang === "en"
                 ? data[0]?.fields?.descriptionEn
                 : data[0]?.fields?.descriptionAr}
             </p>
-            <button className=" hover:drop-shadow-lg duration-300 w-fit px-[32px] py-[16px] bg-[#8CE91C] rounded-full text-black/75 text-[25px] md:text-xl hover:bg-[#8CE91C]/60">
-              {lang === "en"
+            <Button name={  lang === "en"
                 ? data[0]?.fields?.buttonEn
-                : data[0]?.fields?.buttonAr}  
-            </button>
+                : data[0]?.fields?.buttonAr }/>
           </div>
 
           {/* image here*/}
@@ -81,8 +80,8 @@ const Hero = () => {
                 alt=""
                 className="absolute w-full h-full object-fill md:object-fill z-20 rounded-xl"
               />
-              <div className="absolute w-full h-full bg-[#66f138d3] rotate-[-3deg] z-[5] rounded-xl"></div>
-              <div className="absolute w-full h-full bg-[#91dc2fbc] rotate-[-5deg] z-[2] rounded-xl"></div>
+              <div className="absolute w-full h-full bg-[#cb31319e] rotate-[-3deg] z-[5] rounded-xl"></div>
+              <div className="absolute w-full h-full bg-[#cb31319e] rotate-[-5deg] z-[2] rounded-xl"></div>
             </div>
             <div
               className={`hidden w-fit px-2 py-3 rounded-xl xl:flex bg-white  absolute justify-center items-center gap-x-2 z-[30] top-[100px] right-[-30px]`}
@@ -90,10 +89,10 @@ const Hero = () => {
               <div
                 className={`${
                   lang === "ar" ? "xl:flex-row-reverse" : "xl:flex-row"
-                } p-2 flex gap-x-2 text-lg bg-green-900 rounded-sm justify-center items-center text-[#8CE91C]`}
+                } p-2 flex gap-x-2 text-lg bg-[#000] rounded-sm justify-center items-center text-mainColor`}
               >
                 <FaWallet />
-                <h2 className="text-[#8CE91C] ">
+                <h2 className="text-mainColor ">
                   {lang === "en"
                     ? data[0]?.fields?.offerEn
                     : data[0]?.fields?.offerAr}
@@ -108,10 +107,10 @@ const Hero = () => {
               <div
                 className={`${
                   lang === "ar" ? "xl:flex-row" : "xl:flex-row"
-                } p-2 flex gap-x-2 text-lg bg-green-900 rounded-sm justify-center items-center text-[#8CE91C]`}
+                } p-2 flex gap-x-2 text-lg bg-[#000] rounded-sm justify-center items-center text-mainColor`}
               >
                 <PiHeartbeatFill />
-                <h2 className="text-[#8CE91C] ">{t("free")}</h2>
+                <h2 className="text-mainColor ">{t("free")}</h2>
                 <h2 className="text-[#fff] text-xl">
                   {lang === "en"
                     ? data[0]?.fields?.healthAssessmentEn
@@ -125,7 +124,7 @@ const Hero = () => {
 
       {/* Bottom Div */}
       <div className="info w-full  flex items-center justify-center">
-        <div className="content w-[95%]  bg-[#162617]  rounded-b-xl  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2   gap-[20px] px-[20px] py-[50px] ">
+        <div className="content w-[95%]  bg-[#cb31319e]  rounded-b-xl  grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2   gap-[20px] px-[20px] py-[50px] ">
           {infos.map((info, index) => {
             return (
               <div
@@ -136,7 +135,7 @@ const Hero = () => {
                     : ""
                 } xl:text-[35px] lg:text-[30px] md:text-[25px]  sm:text-[25px] text-[25px] leading-10 gap-1 md:gap-5 `}
               >
-                <h2 className="text-[#8CE91C]">{info.number}</h2>
+                <h2 className="text-[#000]">{info.number}</h2>
                 <h2>{info.title}</h2>
               </div>
             );

@@ -44,15 +44,15 @@ const Footer = () => {
               {lang === "en" ? data?.fields?.descEn : data?.fields?.descAr}
             </p>
             <div className="flex space-x-6">
-              <PlayCircleIcon className="text-green-500 h-6 w-6" />
-              <InstagramIcon className="text-green-500 h-6 w-6" />
-              <FacebookIcon className="text-green-500 h-6 w-6" />
+              <PlayCircleIcon className="text-mainColor h-6 w-6" />
+              <InstagramIcon className="text-mainColor h-6 w-6" />
+              <FacebookIcon className="text-mainColor h-6 w-6" />
             </div>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h4 className="text-sm font-semibold tracking-wider text-green-400 uppercase">
+                <h4 className="text-sm font-semibold tracking-wider text-mainColor uppercase">
                   {lang === "en"
                     ? data[0]?.fields?.contac0tEn
                     : data[0]?.fields?.contac0tAr}
@@ -90,7 +90,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="md:mt-0">
-                <h4 className="text-sm font-semibold tracking-wider text-green-400 uppercase">
+                <h4 className="text-sm font-semibold tracking-wider text-mainColor uppercase">
                   {lang === "en"
                     ? data[0]?.fields?.linksEn
                     : data[0]?.fields?.linksAr}
@@ -98,7 +98,7 @@ const Footer = () => {
                 <ul className="mt-4 space-y-4">
                   <li>
                     <a
-                      className="text-base leading-6 hover:text-green-500"
+                      className="text-base leading-6 hover:text-mainColor"
                       href="#"
                     >
                       {lang === "en"
@@ -108,7 +108,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      className="text-base leading-6 hover:text-green-500"
+                      className="text-base leading-6 hover:text-mainColor"
                       href="#"
                     >
                       {lang === "en"
@@ -118,7 +118,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      className="text-base leading-6 hover:text-green-500"
+                      className="text-base leading-6 hover:text-mainColor"
                       href="#"
                     >
                       {lang === "en"
@@ -128,7 +128,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      className="text-base leading-6 hover:text-green-500"
+                      className="text-base leading-6 hover:text-mainColor"
                       href="#"
                     >
                       {lang === "en"
@@ -138,7 +138,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      className="text-base leading-6 hover:text-green-500"
+                      className="text-base leading-6 hover:text-mainColor"
                       href="#"
                     >
                       {lang === "en"

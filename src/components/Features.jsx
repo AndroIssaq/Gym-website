@@ -59,7 +59,7 @@ const Features = () => {
       <div className="w-[95%] flex flex-col justify-center items-center gap-[80px]">
         {/* Text */}
         <div className="flex flex-col justify-center items-center gap-10 mb-[60px]">
-          <h2 className="text-[40px] text-center  md:text-[60px]">
+          <h2 className="text-[40px] text-center text-mainColor  md:text-[60px]">
             {lang === "en"
               ? data[0]?.fields?.headerEn
               : data[0]?.fields?.headerAr}
@@ -75,7 +75,7 @@ const Features = () => {
                 className="flex justify-center items-center gap-3 text-xl"
                 key={index}
               >
-                <div className="text-green-500">{item.icon}</div>
+                <div className="text-mainColor">{item.icon}</div>
                 <h2>{item.text}</h2>
               </div>
             ))}

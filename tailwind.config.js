@@ -20,6 +20,10 @@ module.exports = {
           },
         },
       },
+      colors:{
+        "mainColor":"#cb3131",
+        "secondColor":"#3b3939"
+      }
     },
   },
   daisyui: {

@@ -23,7 +23,7 @@ const OurTeam = () => {
       console.log(error);
     }
   };
-
+console.log(data);
   useEffect(() => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps

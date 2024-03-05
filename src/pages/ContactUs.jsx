@@ -42,8 +42,8 @@ const ContactUs = () => {
             : data[0]?.fields?.contactAr
         }`}
       />
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-16 ">
-        <div>
+      <div className={`container  flex ${lang==='en'? 'lg:flex-row md:flex-row sm:flex-col flex-col':'lg:flex-row-reverse md:flex-row-reverse sm:flex-col flex-col'} items-center justify-center gap-[50px] `}>
+        <div className={`info flex-1 flex flex-col ${lang==='ar'&& 'items-end text-end'}  `}>
           <h1 className="text-4xl font-bold  mb-2">
             {" "}
             {lang === "en"
@@ -55,7 +55,7 @@ const ContactUs = () => {
             {lang === "en" ? data[0]?.fields?.deskEn : data[0]?.fields?.deskAr}
           </p>
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <div className={`flex items-center ${lang==='ar'&& ' flex-row-reverse items-end text-end'} gap-[10px]  space-x-2`}>
               <CiLocationOn className="text-[#00d084] w-6 h-6" />
               <span>
                 {lang === "en"
@@ -63,17 +63,17 @@ const ContactUs = () => {
                   : data[0]?.fields?.adressAr}{" "}
               </span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className={`flex items-center ${lang==='ar'&& ' flex-row-reverse items-end text-end'} gap-[10px]  space-x-2`}>
               <CiPhone className="text-[#00d084] w-6 h-6" />
               <span>+1 (123) 456-7890</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className={`flex items-center ${lang==='ar'&& ' flex-row-reverse items-end text-end'} gap-[10px]   space-x-2`}>
               <HiOutlinePaperAirplane className="text-[#00d084] w-6 h-6" />
               <span>info@elitegym.com</span>
             </div>
           </div>
         </div>
-        <div className="bg-[#c9e9d3] mb-[50px] p-8 rounded-lg shadow-md">
+        <div className="bg-[#c9e9d3] w-full flex-1 mb-[50px] p-8 rounded-lg shadow-md">
           <form
             action="#"
             className="grid  grid-cols-1 h-[50vh] gap-y-6 sm:grid-cols-2 sm:gap-x-8"
@@ -143,7 +143,7 @@ const ContactUs = () => {
             </div>
             <div className="sm:col-span-2">
               <button
-                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 transition duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                 type="submit"
               >
                 {lang === "en"
@@ -154,6 +154,9 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
+      <div className="map w-[95%] mb-[50px] flex items-center justify-center">
+        <iframe className="w-full h-[60vh] rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55206.264385878414!2d31.373625644642704!3d30.140220365837514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815b667878ee5%3A0x417d83d1f104c7b4!2sWorld%20Gym!5e0!3m2!1sar!2seg!4v1709448845620!5m2!1sar!2seg"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
   );
 };

@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import Title from "./Title";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
+import Button from "./Button";
 const AboutCeo = () => {
   const [t, i18n] = useTranslation();
   const lang = i18n.language;
@@ -67,11 +69,9 @@ const AboutCeo = () => {
                   ? data[0]?.fields?.descriptionEn
                   : data[0]?.fields?.descriptionAr}
               </p>
-              <button className=" hover:drop-shadow-lg duration-300 w-fit px-[32px] py-[16px] bg-[#8CE91C] rounded-full text-black/75 text-[25px] md:text-xl hover:bg-[#8CE91C]/60">
-                {lang === "en"
-                  ? data[0]?.fields?.buttonEn
-                  : data[0]?.fields?.buttonAr}
-              </button>
+              <Button name={  lang === "en"
+                ? data[0]?.fields?.buttonEn
+                : data[0]?.fields?.buttonAr }/>
             </div>
           </div>
         </div>

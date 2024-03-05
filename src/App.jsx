@@ -23,8 +23,4 @@ function App() {
 }
 
 export default App;
-/*
- <div className='flex items-center justify-center gap-[20px]'>
-      <button onClick={()=>i18n.changeLanguage('ar')}>AR</button>
-      <button onClick={()=>i18n.changeLanguage('en')}>EN</button>
-    </div>*/
+

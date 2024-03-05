@@ -94,7 +94,7 @@ const OurClasses = () => {
                     <CardItem
                       translateZ={20}
                       as="button"
-                      className=" flex-1 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                      className=" flex-1 py-2 rounded-xl bg-mainColor text-[#fff] text-xs font-bold"
                     >
                       <Link to={"/"}>
                         {t("Our Classes Section show More Button")}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
 import Title from "./Title";
+import Button from "./Button";
 
 const Plans = () => {
   const [plan, setPlan] = useState("monthly");
@@ -45,7 +46,7 @@ const Plans = () => {
           <button
             onClick={() => setPlan("monthly")}
             className={`cursor-pointer p-3 duration-300 text-[20px] rounded-md ${
-              plan === "monthly" && "bg-green-500"
+              plan === "monthly" && "bg-mainColor"
             }`}
           >
             {lang === "en"
@@ -55,7 +56,7 @@ const Plans = () => {
           <button
             onClick={() => setPlan("yearly")}
             className={`cursor-pointer p-3 rounded-md text-[20px] ${
-              plan === "yearly" && "bg-green-500"
+              plan === "yearly" && "bg-mainColor"
             }`}
           >
             {" "}
@@ -77,7 +78,7 @@ const Plans = () => {
           <div
             className={`flex flex-col w-full lg:flex-1  ${
               lang === "en" ? "items-start" : "items-end"
-            }  py-9 px-5 bg-[#E9FAD5] gap-6 rounded-xl`}
+            }  py-9 px-5  bg-secondColor gap-6 rounded-xl`}
           >
             <h2
               className={`text-black text-[40px] ${
@@ -110,21 +111,20 @@ const Plans = () => {
                       : data[0]?.fields?.card1PriceAr
                   } `}
             </h2>
-            <button className="py-3 px-5 bg-[#8CE91C] text-black rounded-full text-[20px] hover:drop-shadow-lg duration-300 hover:bg-[#8CE91C]/60">
-              {lang === "en"
+            <Button name={  lang === "en"
                 ? data[0]?.fields?.card1BtnEn
-                : data[0]?.fields?.card1BtnAr}
-            </button>
+                : data[0]?.fields?.card1BtnAr }/>
+           
           </div>
 
           {/* Card 2*/}
           <div
-            className={`flex flex-col w-full lg:flex-1 py-[65px] px-5 bg-[#1A2C1B]  ${
+            className={`flex flex-col w-full lg:flex-1 py-[65px] px-5 bg-[#eb9995b9]  ${
               lang === "en" ? "items-start" : "items-end"
             }  gap-6 rounded-xl`}
           >
             <h2
-              className={`text-[#8CE91C] text-[40px] ${
+              className={`text-[#000] text-[40px] ${
                 lang === "en" && "w-[20%]"
               } `}
             >
@@ -153,17 +153,14 @@ const Plans = () => {
                       : data[0]?.fields?.card2PriceAr
                   } `}
             </h2>
-            <button className="py-3 px-5 bg-[#8CE91C] text-black rounded-full text-[20px] hover:drop-shadow-lg duration-300 hover:bg-[#8CE91C]/60">
-              {" "}
-              {lang === "en"
+            <Button name={  lang === "en"
                 ? data[0]?.fields?.card1BtnEn
-                : data[0]?.fields?.card1BtnAr}
-            </button>
+                : data[0]?.fields?.card1BtnAr }/>
           </div>
 
           {/* Card 3*/}
           <div
-            className={`flex flex-col w-full lg:flex-1 py-9 px-5 bg-[#E9FAD5]  ${
+            className={`flex flex-col w-full lg:flex-1 py-9 px-5 bg-secondColor   ${
               lang === "en" ? "items-start" : "items-end"
             }  gap-6 rounded-xl`}
           >
@@ -199,11 +196,9 @@ const Plans = () => {
                       : data[0]?.fields?.card3PriceAr
                   } `}
             </h2>
-            <button className="py-3 px-5 bg-[#8CE91C] text-black rounded-full text-[20px] hover:drop-shadow-lg duration-300 hover:bg-[#8CE91C]/60">
-              {lang === "en"
+            <Button name={  lang === "en"
                 ? data[0]?.fields?.card1BtnEn
-                : data[0]?.fields?.card1BtnAr}
-            </button>
+                : data[0]?.fields?.card1BtnAr }/>
           </div>
         </div>
       </div>

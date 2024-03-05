@@ -7,6 +7,7 @@ import { PiEggCrackBold } from "react-icons/pi";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
+import Button from "./Button";
 
 const Services = () => {
   const [data, setData] = useState([]);
@@ -41,7 +42,7 @@ const Services = () => {
       <div
         className={`gap-12 h-min w-[95%] py-[70px] md:py-[120px] px-[16px] md:px-[32px] flex ${
           lang === "ar" ? "md:flex-row-reverse" : "md:flex-row"
-        } flex-col rounded-2xl justify-center bg-green-900`}
+        } flex-col rounded-2xl justify-center bg-secondColor`}
       >
         {/* Left */}
         <div
@@ -49,7 +50,7 @@ const Services = () => {
             lang === "ar" ? "items-end text-end" : "items-start"
           } `}
         >
-          <h2 className="text-[40px] md:w-[60%] text-[#8CE91C]">
+          <h2 className="text-[40px] md:w-[60%] text-mainColor">
             {lang === "en"
               ? data[0]?.fields?.headerEn
               : data[0]?.fields?.headerAr}
@@ -59,11 +60,9 @@ const Services = () => {
               ? data[0]?.fields?.descriptionEn
               : data[0]?.fields?.descriptionAr}
           </h2>
-          <button className=" hover:drop-shadow-lg duration-300 w-fit px-[32px] py-[16px] bg-[#8CE91C] rounded-full text-black/75 text-[25px] md:text-xl hover:bg-[#8CE91C]/60">
-            {lang === "en"
-              ? data[0]?.fields?.buttonEn
-              : data[0]?.fields?.buttonAr}
-          </button>
+          <Button name={  lang === "en"
+                ? data[0]?.fields?.buttonEn
+                : data[0]?.fields?.buttonAr }/>
         </div>
         {/* Right */}
         <div className="flex-1 grid grid-cols-2 gap-[55px]">
@@ -74,7 +73,7 @@ const Services = () => {
                 lang === "ar" ? "text-end items-end" : "items-start text-start"
               }`}
             >
-              <FaDumbbell className="text-2xl text-green-500" />
+              <FaDumbbell className="text-2xl text-mainColor" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
                   ? data[0]?.fields?.service1en
@@ -92,7 +91,7 @@ const Services = () => {
                 lang === "ar" ? "text-end items-end" : "items-start text-start"
               }`}
             >
-              <PiEggCrackBold className="text-2xl text-green-500" />
+              <PiEggCrackBold className="text-2xl text-mainColor" />
               <h2 className="text-[25px] text-white">
                 {" "}
                 {lang === "en"
@@ -111,7 +110,7 @@ const Services = () => {
                 lang === "ar" ? "text-end items-end" : "items-start text-start"
               }`}
             >
-              <BsListCheck className="text-2xl text-green-500" />
+              <BsListCheck className="text-2xl text-mainColor" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
                   ? data[0]?.fields?.service3en
@@ -132,7 +131,7 @@ const Services = () => {
                 lang === "ar" ? "text-end items-end" : "items-start text-start"
               }`}
             >
-              <GrGroup className="text-2xl text-green-500" />
+              <GrGroup className="text-2xl text-mainColor" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
                   ? data[0]?.fields?.service4en
@@ -149,7 +148,7 @@ const Services = () => {
                 lang === "ar" ? "text-end items-end" : "items-start text-start"
               }`}
             >
-              <IoMdHeartHalf className="text-2xl text-green-500" />
+              <IoMdHeartHalf className="text-2xl text-mainColor" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
                   ? data[0]?.fields?.service5en
@@ -166,7 +165,7 @@ const Services = () => {
                 lang === "ar" ? "text-end items-end" : "items-start text-start"
               }`}
             >
-              <FaComputer className="text-2xl text-green-500" />
+              <FaComputer className="text-2xl text-mainColor" />
               <h2 className="text-[25px] text-white">
                 {lang === "en"
                   ? data[0]?.fields?.service6en

@@ -55,11 +55,10 @@ export function InfiniteMovingCardsDemo() {
   const getData = async () => {
     try {
       const response = await client.getEntries<AboutUsTitleSection>({
-        content_type: "infinityLoopSection",
+        content_type: "infinityLoopCard",
       });
       console.log(response);
       setData(response.items);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -70,29 +69,29 @@ export function InfiniteMovingCardsDemo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const testimonials = [
-    {
-      img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
-    },
-    {
-      img: `${data[0]?.fields?.img2?.fields?.file?.url}`,
-    },
-    {
-      img: `${data[0]?.fields?.img3?.fields?.file?.url}`,
-    },
-    {
-      img: `${data[0]?.fields?.img4?.fields?.file?.url}`,
-    },
-    {
-      img: `${data[0]?.fields?.img5?.fields?.file?.url}`,
-    },
-    {
-      img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
+  //   },
+  //   {
+  //     img: `${data[0]?.fields?.img2?.fields?.file?.url}`,
+  //   },
+  //   {
+  //     img: `${data[0]?.fields?.img3?.fields?.file?.url}`,
+  //   },
+  //   {
+  //     img: `${data[0]?.fields?.img4?.fields?.file?.url}`,
+  //   },
+  //   {
+  //     img: `${data[0]?.fields?.img5?.fields?.file?.url}`,
+  //   },
+  //   {
+  //     img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
+  //   },
+  // ];
   return (
     <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+      <InfiniteMovingCards items={data} direction="left" speed="slow" />
     </div>
   );
 }

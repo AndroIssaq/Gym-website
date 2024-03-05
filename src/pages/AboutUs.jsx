@@ -38,7 +38,7 @@ const AboutUs = () => {
     <>
       <main className="flex flex-col items-center justify-center gap-[50px]">
         <FlexComponent
-          flexRow={true}
+          flexRow={true} 
           img={data[0]?.fields?.img1?.fields?.file?.url}
           title={`${
             lang === "en"

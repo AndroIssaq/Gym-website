@@ -19,6 +19,7 @@ const OurClasses = () => {
         content_type: "ourClasses",
       });
       setData(response.items);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }

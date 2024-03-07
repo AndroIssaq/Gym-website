@@ -16,7 +16,7 @@ const FlexComponent = ({ img, title, des, flexRow }) => {
         >
           <div className={`flex-1 p-[30px] ${lang === "ar" && "text-end"}`}>
             <h1 className="  text-6xl font-bold leading-tight mb-4">{title}</h1>
-            <div className="w-24 h-1 bg-[#7ca86b] mb-6" />
+            <div className="w-24 h-1 bg-mainColor mb-6" />
             <p className="text-lg">{des}</p>
           </div>
           <div className="flex-1">

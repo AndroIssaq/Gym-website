@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Video = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoEmbed = "https://youtu.be/5Y-aYA6YLlg?si=a9M-2AVBPbyfBzfG";
-
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   return (
@@ -18,10 +14,7 @@ const Video = () => {
           className="absolute z-[-1] rounded-2xl top-0 left-0 h-[600px] flex w-full justify-start items-center object-cover object-top 
           "
         >
-          <source
-            src="/production_id-4110674 (2160p).mp4"
-            type="video/mp4"
-          />
+          <source src="/production_id-4110674 (2160p).mp4" type="video/mp4" />
         </video>
         <div
           className={`flex justify-center items-center w-full p-5 gap-8 ${

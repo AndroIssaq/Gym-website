@@ -37,6 +37,7 @@ const AboutUs = () => {
   return (
     <>
       <main className="flex flex-col items-center justify-center gap-[50px]">
+        <Panner title={'About Us'}/>
         <FlexComponent
           flexRow={true} 
           img={data[0]?.fields?.img1?.fields?.file?.url}

@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from './pages/ContactUs'
+import Services from "./pages/Services";
 function App() {
   const [t, i18n] = useTranslation();
   return (
@@ -15,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Services" element={<Services/>} />
         <Route path="/contactus" element={<ContactUs />} />
+
       </Routes>
       <Footer/>
     </>

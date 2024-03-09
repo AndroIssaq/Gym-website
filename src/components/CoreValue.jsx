@@ -81,7 +81,7 @@ const CoreValue = () => {
     },
   ];
   return (
-    <div className="bg-[#0f331f] text-white container rounded-xl xl:h-[60vh] lg:h-[60vh]">
+    <div className="bg-secondColor text-white container rounded-xl xl:h-[60vh] lg:h-[60vh]">
       <div className="p-[20px] flex flex-col items-center justify-center h-full">
         <Title
           title={`${
@@ -97,7 +97,7 @@ const CoreValue = () => {
                 key={index}
                 className=" flex flex-col items-center justify-center p-[20px]"
               >
-                <coreValue.icon className="text-[#66ff00] text-[35px]" />
+                <coreValue.icon className="text-mainColor text-[35px]" />
                 <h3 className="text-[35px] font-semibold text-center">
                   {coreValue.title}
                 </h3>

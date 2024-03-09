@@ -52,11 +52,11 @@ const Hero = () => {
           } content w-full flex  gap-12 lg:gap-0  `}
         >
           {/* Text */}
-          <div  
+          <div
             className={`  flex flex-1 flex-col gap-[20px] justify-center ${
               lang === "ar" ? "items-end text-end" : "text-start items-start"
             } `}
-          > 
+          >
             <h2 className="lg:tex`t-[35px] text-[25px] text-mainColor">
               {lang === "en"
                 ? data[0]?.fields?.headerEn
@@ -67,9 +67,13 @@ const Hero = () => {
                 ? data[0]?.fields?.descriptionEn
                 : data[0]?.fields?.descriptionAr}
             </p>
-            <Button name={  lang === "en"
-                ? data[0]?.fields?.buttonEn
-                : data[0]?.fields?.buttonAr }/>
+            <Button
+              name={
+                lang === "en"
+                  ? data[0]?.fields?.buttonEn
+                  : data[0]?.fields?.buttonAr
+              }
+            />
           </div>
 
           {/* image here*/}

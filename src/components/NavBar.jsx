@@ -21,9 +21,15 @@ const NavBar = () => {
           }  rounded-xl p-[20px] w-[95%] flex items-center justify-between h-[70px]`}
         >
           <Link to={"/"}>
-            <div className="text-[40px] text-mainColor">WORLD <span className="text-[#fff]">GYM</span></div>
+            <div className="text-[40px] text-mainColor">
+              WORLD <span className="text-[#fff]">GYM</span>
+            </div>
           </Link>
-          <ul className={`links text-[20px] ${lang==='ar'&&'flex-row-reverse'}  items-center gap-[20px] lg:flex md:flex sm:hidden hidden relative`}>
+          <ul
+            className={`links text-[20px] ${
+              lang === "ar" && "flex-row-reverse"
+            }  items-center gap-[20px] lg:flex md:flex sm:hidden hidden relative`}
+          >
             <Link to={"/"}>
               <li>
                 <a href="">{t("Home")}</a>
@@ -51,7 +57,7 @@ const NavBar = () => {
               className="select rounded-xl  w-[70px] max-w-xs text-[#fff]"
             >
               <option value={"en"}>EN</option>
-              <option value={"ar"} >AR</option>
+              <option value={"ar"}>AR</option>
             </select>
             <button
               onClick={() => setOpenMenu(!openMenu)}

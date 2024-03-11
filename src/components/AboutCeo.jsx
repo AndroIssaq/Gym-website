@@ -36,14 +36,22 @@ const AboutCeo = () => {
       <Title title={t("About Ceo Section Title")} />
       <div className="container ">
         <div className="content mt-[50px] xl:flex-row lg:flex-col md:flex-col sm:flex-col flex-col gap-[50px]  flex items-start justify-center ">
-          <div className="left relative flex-1 flex items-center justify-center">
-            <div className="img lg:h-[670px] md:h-[550px] sm:h-[350px] h-[350px] lg:w-[90%] md:w-[95%] sm:w-[95%] w-[95%] rounded-[30px] overflow-hidden">
-              <img
-                src={"http:" + data[0]?.fields?.img?.fields?.file?.url}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="left relative flex-1 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-[25px]">
+
+            {
+              data[0]?.fields?.images?.map((img,index)=>{
+                return(
+                  <div key={index} className="img lg:h-[300px] md:h-[550px] sm:h-[350px] h-[350px] lg:w-[90%] md:w-[95%] sm:w-[95%] w-[95%] rounded-[30px] overflow-hidden">
+                  <img
+                    src={"http:" + img?.fields?.file?.url}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                )
+              })
+            }
+           
           </div>
 
           <div
@@ -69,7 +77,7 @@ const AboutCeo = () => {
                   ? data[0]?.fields?.descriptionEn
                   : data[0]?.fields?.descriptionAr}
               </p>
-              <Button name={  lang === "en"
+              <Button   link={'AboutUs'} name={  lang === "en"
                 ? data[0]?.fields?.buttonEn
                 : data[0]?.fields?.buttonAr }/>
             </div>

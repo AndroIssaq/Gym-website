@@ -60,7 +60,7 @@ const Services = () => {
               ? data[0]?.fields?.descriptionEn
               : data[0]?.fields?.descriptionAr}
           </h2>
-          <Button name={  lang === "en"
+          <Button link={'contactus'} name={  lang === "en"
                 ? data[0]?.fields?.buttonEn
                 : data[0]?.fields?.buttonAr }/>
         </div>

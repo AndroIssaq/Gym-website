@@ -41,7 +41,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-full justify-center items-center flex flex-col mt-8 ">
+    <section className=" hero w-full justify-center items-center flex flex-col mt-8 ">
       <div className=" w-[95%] rounded-t-xl bg-secondColor flex  p-[25px]">
         {/* Upper Div */}
         <div
@@ -68,6 +68,7 @@ const Hero = () => {
                 : data[0]?.fields?.descriptionAr}
             </p>
             <Button
+            link={'Classes'}
               name={
                 lang === "en"
                   ? data[0]?.fields?.buttonEn
@@ -80,9 +81,9 @@ const Hero = () => {
           <div className=" flex flex-1 justify-center items-center w-full h-full sm:mb-0 md:mb-20 transition-all duration-300 relative">
             <div className="w-[400px] h-[300px] sm:w-[400px] sm:h-[362px] md:w-[400px] md:h-[600px] xl:w-[600px] xl:h-[600px] flex justify-center items-center relative ">
               <img
-                src={img}
+                src={"http:" + data[0]?.fields?.img?.fields?.file?.url}
                 alt=""
-                className="absolute w-full h-full object-fill md:object-fill z-20 rounded-xl"
+                className="absolute w-full h-full object-cover md:object-fill z-20 rounded-xl"
               />
               <div className="absolute w-full h-full bg-[#cb31319e] rotate-[-3deg] z-[5] rounded-xl"></div>
               <div className="absolute w-full h-full bg-[#cb31319e] rotate-[-5deg] z-[2] rounded-xl"></div>

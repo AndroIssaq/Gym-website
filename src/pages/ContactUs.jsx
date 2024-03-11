@@ -83,7 +83,7 @@ const ContactUs = () => {
               } gap-[10px]  space-x-2`}
             >
               <CiPhone className="text-mainColor w-6 h-6" />
-              <span>+1 (123) 456-7890</span>
+              <span>026220202</span>
             </div>
             <div
               className={`flex items-center ${
@@ -179,7 +179,7 @@ const ContactUs = () => {
       <div className="map w-[95%] mb-[50px] flex items-center justify-center">
         <iframe
           className="w-full h-[60vh] rounded-md"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55206.264385878414!2d31.373625644642704!3d30.140220365837514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815b667878ee5%3A0x417d83d1f104c7b4!2sWorld%20Gym!5e0!3m2!1sar!2seg!4v1709448845620!5m2!1sar!2seg"
+          src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3630.8578868010336!2d54.3555504!3d24.4903804!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDI5JzI1LjQiTiA1NMKwMjEnMjAuMCJF!5e0!3m2!1sen!2seg!4v1710176839512!5m2!1sen!2seg"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -190,3 +190,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+

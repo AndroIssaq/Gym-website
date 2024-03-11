@@ -45,13 +45,13 @@ const Footer = () => {
                   <li>
                     <h5 className="text-base leading-6">Address</h5>
                     <p className="mt-2 text-base leading-6">
-                      123 Fitness Avenue, Cityville, State 12345, USA
+                    Abu Dhabi Corniche in front of the Mall / Souq Tower. Floor first
                     </p>
                   </li>
                   <li>
                     <h5 className="text-base leading-6">Phone</h5>
                     <p className="mt-2 text-base leading-6">
-                      +1 (123) 456-7890
+                    026220202
                     </p>
                   </li>
                   <li>
@@ -97,14 +97,6 @@ const Footer = () => {
                       href="#"
                     >
                       <Link to={"/ContactUs"}>Contact</Link>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-base leading-6 hover:text-mainColor"
-                      href="#"
-                    >
-                      <Link to={"/"}>Blog</Link>
                     </a>
                   </li>
                 </ul>

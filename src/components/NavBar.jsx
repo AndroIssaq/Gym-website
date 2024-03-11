@@ -40,9 +40,9 @@ const NavBar = () => {
                 <a href="">{t("About Us")}</a>
               </li>
             </Link>
-            <Link to={"/Services"}>
+            <Link to={"/Classes"}>
               <li>
-                <a href="">{t("Services")}</a>
+                <a href="">{t("Classes")}</a>
               </li>
             </Link>
             <Link to={"/contactus"}>
@@ -74,35 +74,35 @@ const NavBar = () => {
           openMenu ? "fade-in" : "fade-out"
         }  absolute w-[100%]  flex items-center justify-center gap-[40px]`}
       >
-        <nav className=" w-[95%] p-[20px] bg-[#2f8240]  rounded-2xl flex flex-col items-center justify-center gap-[40px]">
+        <nav className=" w-[95%] p-[20px] bg-mainColor  rounded-2xl flex flex-col items-center justify-center gap-[40px]">
           <ul className="flex flex-col items-center justify-center gap-[40px] ">
             <Link
               to={"/"}
               onClick={() => setOpenMenu(!openMenu)}
               className="lg:text-[40px] md:text-[40px] text-[25px]"
             >
-              Home
+             {t("Home")}
             </Link>
             <Link
-              to={"/ourteam"}
+              to={"/About Us"}
               onClick={() => setOpenMenu(!openMenu)}
               className="lg:text-[40px] md:text-[40px] text-[25px]"
             >
-              Our Team
+              {t("About Us")}
             </Link>
             <Link
-              to={"portfolio"}
+              to={"Classes"}
               onClick={() => setOpenMenu(!openMenu)}
               className="lg:text-[40px] md:text-[40px] text-[25px]"
             >
-              Portfolio
+              {t("Classes")}
             </Link>
             <Link
               to={"/contactus"}
               onClick={() => setOpenMenu(!openMenu)}
               className="lg:text-[40px] md:text-[40px] text-[25px]"
             >
-              Contact Us
+              {t("ContactUs")}
             </Link>
           </ul>
 

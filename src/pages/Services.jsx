@@ -32,17 +32,19 @@ const Services = () => {
     }, []);
     const [ t,i18n]  = useTranslation();
     const lang = i18n.language;
-    console.log(data);
+    const reversedData=data.reverse()
+    console.log(reversedData);
   return (
    <section className='flex items-center justify-center flex-col'>
         <Panner title={'Classes'}/> 
-        <div className="container flex items-center justify-center flex-col  ">
+        <div className="container flex items-center justify-center flex-col   ">
             {
-                data.map((clas,index)=>{
+                reversedData.map((clas,index)=>{
+                  console.log(clas.fields.right);
                     return(
-                        <div key={index} className="flex mb-[50px] xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col  w-full items-center justify-center gap-[50px]">
+                        <div key={index}  className={`flex  mt-[50px] mb-[50px] ${clas.fields.right===false ?  'xl:flex-row-reverse lg:flex-row-reverse flex-row-reverse' : 'xl:flex-row lg:flex-row flex-row'} md:flex-col sm:flex-col flex-col  w-full items-center justify-center gap-[50px]`}>
                         <div className="flex-[1] lg:h-[90vh] md:h-[80vh] sm:h-[60vh] h-[60vh]">
-                            <img src={img} alt="Weightlifting" className="h-full w-full rounded-md object-cover"/>
+                            <img src={"http:" + clas.fields?.img?.fields?.file?.url} alt="Weightlifting" className="h-full w-full rounded-md object-cover"/>
                         </div>
                         <div className={`flex-[1] ${lang==='ar'&& 'items-end text-end'}   flex flex-col gap-[20px] `}>
                         <span className='w-[40px] h-[40px] bg-[#fff] rounded-md text-center flex items-center text-[20px] font-extrabold justify-center text-mainColor'>{clas?.fields?.numberOfClassEn}</span>

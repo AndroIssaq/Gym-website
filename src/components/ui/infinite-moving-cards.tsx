@@ -65,7 +65,9 @@ export const InfiniteMovingCards = ({
       }
     }
   };
-  console.log(items);
+
+  console.log(items[0]?.fields?.img);
+
   return (
     <div
       ref={containerRef}
@@ -82,7 +84,8 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items?.map((item, idx) => (
+        
+        {items[0]?.fields?.img.map((img, idx) => (
           <li
             className=" lg:w-[30%] h-[400px] md:w-[40%] sm:w-[80%] w-[90%]  relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 "
             style={{
@@ -92,7 +95,7 @@ export const InfiniteMovingCards = ({
             key={idx}
           >
             <img
-              src={item.fields?.img[0]?.fields?.file?.url}
+              src={"http:" + img.fields.file.url}
               className=" w-full h-[100%] object-cover rounded-md "
             />
           </li>

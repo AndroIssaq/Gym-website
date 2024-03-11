@@ -5,7 +5,8 @@ import { InfiniteMovingCardsDemo } from "../components/InfiniteMovingCards";
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
-
+import Panner from '../components/Panner'
+import AboutCeo from "../components/AboutCeo";
 const AboutUs = () => {
   const [data, setData] = useState([]);
   const client = createClient({
@@ -37,7 +38,8 @@ const AboutUs = () => {
   return (
     <>
       <main className="flex flex-col items-center justify-center gap-[50px]">
-        <Panner title={'About Us'}/>
+      <Panner title={'About Us'}/>
+
         <FlexComponent
           flexRow={true}
           img={data[0]?.fields?.img1?.fields?.file?.url}
@@ -50,6 +52,7 @@ const AboutUs = () => {
             lang === "en" ? data[0]?.fields?.desk1En : data[0]?.fields?.desk1Ar
           }`}
         />
+              <AboutCeo/>
         <FlexComponent
           flexRow={false}
           img={data[0]?.fields?.img2?.fields?.file?.url}
@@ -62,9 +65,10 @@ const AboutUs = () => {
             lang === "en" ? data[0]?.fields?.desk2En : data[0]?.fields?.desk2Ar
           }`}
         />
-        <CoreValue />
         <InfiniteMovingCardsDemo />
-        <OurTeam />
+        <CoreValue />
+
+
       </main>
     </>
   );

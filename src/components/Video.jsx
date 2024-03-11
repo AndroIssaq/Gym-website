@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-
+import video from '../assets/FDownloader.net-464602575365516-(1080p).mp4'
 const Video = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
@@ -14,7 +14,7 @@ const Video = () => {
           className="absolute z-[-1] rounded-2xl top-0 left-0 h-[600px] flex w-full justify-start items-center object-cover object-top 
           "
         >
-          <source src="/production_id-4110674 (2160p).mp4" type="video/mp4" />
+          <source src={video} type="video/mp4" />
         </video>
         <div
           className={`flex justify-center items-center w-full p-5 gap-8 ${

@@ -83,12 +83,10 @@ const NavBar = () => {
             >
              {t("Home")}
             </Link>
-            <Link
-              to={"/About Us"}
-              onClick={() => setOpenMenu(!openMenu)}
-              className="lg:text-[40px] md:text-[40px] text-[25px]"
-            >
-              {t("About Us")}
+            <Link onClick={() => setOpenMenu(!openMenu)} to={"/AboutUs"}>
+              <li className="lg:text-[40px] md:text-[40px] text-[25px]">
+                <a href="">{t("About Us")}</a>
+              </li>
             </Link>
             <Link
               to={"Classes"}

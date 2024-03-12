@@ -27,7 +27,7 @@ const Video = () => {
           <div
             className={` flex ${
               lang === "en" ? "justify-start" : "justify-end"
-            } items-center`}
+            } items-center text-center`}
           >
             <h2 className="text-[50px]">
               {t("Transform Your Body Transform Your Life")}

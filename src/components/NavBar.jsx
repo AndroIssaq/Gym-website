@@ -7,6 +7,7 @@ import {
   FaBehance,
   FaTwitter,
 } from "react-icons/fa";
+import logo from '../assets/WhatsApp Image 2024-03-12 at 12.41.20_8c500542.jpg'
 import { useTranslation } from "react-i18next";
 const NavBar = () => {
   const [t, i18n] = useTranslation();
@@ -18,11 +19,11 @@ const NavBar = () => {
         <div
           className={` bg-[#353434] ${
             lang === "ar" ? "flex-row-reverse" : "flex-row"
-          }  rounded-xl p-[20px] w-[95%] flex items-center justify-between h-[70px]`}
+          }  rounded-xl p-[20px] w-[95%] flex items-center justify-between h-[80px]`}
         >
           <Link to={"/"}>
-            <div className="text-[40px] text-mainColor">
-              WORLD <span className="text-[#fff]">GYM</span>
+            <div className="w-[70px] h-[70px] rounded-full overflow-hidden">
+              <img src={logo} alt="" className="w-[70px] object-cover" />
             </div>
           </Link>
           <ul

@@ -15,6 +15,8 @@ const AboutUs = () => {
     accessToken: "4JIa96FCzgsFkumBK_SdLRFjEibOL-DBR7tQtYNJlX8",
   });
 
+
+
   const getData = async () => {
     try {
       const response = await client.getEntries({
@@ -32,13 +34,13 @@ const AboutUs = () => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const { i18n } = useTranslation();
+  const [ t,i18n ] = useTranslation();
   const lang = i18n.language;
 
   return (
     <>
       <main className="flex flex-col items-center justify-center gap-[50px]">
-      <Panner title={'About Us'}/>
+      <Panner title={t('About Us')}/>
 
         <FlexComponent
           flexRow={true}

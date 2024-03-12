@@ -32,11 +32,18 @@ const Services = () => {
     }, []);
     const [ t,i18n]  = useTranslation();
     const lang = i18n.language;
-    const reversedData=data.reverse()
-    console.log(reversedData);
+
+    function reverseArray(arr) {
+      let reversedArr = [];
+      for (let i = arr.length - 1; i >= 0; i--) {
+          reversedArr.push(arr[i]);
+      }
+      return reversedArr;
+  }
+    const reversedData=reverseArray(data)
   return (
    <section className='flex items-center justify-center flex-col'>
-        <Panner title={'Classes'}/> 
+        <Panner title={t('Classes')}/> 
         <div className="container flex items-center justify-center flex-col   ">
             {
                 reversedData.map((clas,index)=>{
@@ -68,7 +75,7 @@ const Services = () => {
                                 : clas?.fields?.benefitsAr
                               }
                             </p>
-                            <Button name={t('Join To Class')}/>
+                            <Button name={t('Join To Class')} link={'/contactus'}/>
                       </div>
                     </div>
                     )

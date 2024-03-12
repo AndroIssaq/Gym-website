@@ -56,7 +56,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="w-full flex justify-center items-center mt-[120px]">
+    <section className="w-full flex justify-center items-center mt-[30px]">
       <div className="w-[95%] flex flex-col justify-center items-center gap-[80px]">
         {/* Text */}
         <div className="flex flex-col justify-center items-center gap-10 mb-[60px]">

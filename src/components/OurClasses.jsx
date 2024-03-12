@@ -39,50 +39,53 @@ const OurClasses = () => {
         des={t("Our Classes Section Des")}
       />
       <div className="container">
-        <div className="content grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-[20px]">
+        <div className="content card-parent grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-[20px]">
           {data?.map((service, index) => {
             return (
-              <CardContainer key={index} className="inter-var">
+              <CardContainer key={index} className="inter-var ">
                 <CardBody
-                  className={`bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto flex flex-col ${
+                  className={`bg-gray-50 py-[0px] relative card group/card xl:h-[88vh] lg:h-[50vh] md:h-[50vh] sm:h-[90vh] h-[83vh] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto  flex flex-col  ${
                     lang === "ar" ? "items-end" : "items-start"
                   }  rounded-xl p-6 border  `}
                 >
                   <CardItem
                     translateZ="50"
-                    className="text-xl  text-neutral-600  dark:text-white"
+                    className="text-xl    text-neutral-600  dark:text-white"
                   >
                     {lang === "en"
                       ? service?.fields?.titleEn
                       : service?.fields?.titleAr}
                   </CardItem>
+
+                  <CardItem translateZ="100" className="w-full mt-4 h-[50%]">
+                    <img
+                      src={"http:" + service.fields?.img?.fields?.file?.url}
+                      className="h-full w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      alt="thumbnail"
+                    />
+                  </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-[#585757]  text-sm max-w-sm mt-2 "
+                    className={`text-[#585757] ${
+                      lang === "ar" ? "items-end" : "items-start"
+                    } text-end  text-sm max-w-sm mt-[20px]   `}
                   >
                     {lang === "en"
                       ? service?.fields?.descriptionEn
                       : service?.fields?.descriptionAr}
                   </CardItem>
-                  <CardItem translateZ="100" className="w-full mt-4">
-                    <img
-                      src={img}
-                      className="h-80 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                      alt="thumbnail"
-                    />
-                  </CardItem>
                   <div
                     className={`flex ${
                       lang === "ar"
-                        ? "flex-row-reverse justify-between"
-                        : "flex-row justify-between"
-                    } w-full gap-[20px] items-center mt-20 `}
+                        ? "flex-row-reverse justify-between text-end"
+                        : "flex-row justify-between "
+                    } w-full gap-[20px] items-center mt-20 flex-1  `}
                   >
                     <CardItem
                       translateZ={20}
                       as="p"
-                      className=" py-2 rounded-xl text-xs font-normal flex-[3] dark:text-white"
+                      className=" py-2 rounded-xl text-xs font-normal  dark:text-white flex-1"
                     >
                       <p className="text-[#585757] text-sm max-w-sm mt-2">
                         {" "}

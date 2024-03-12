@@ -138,7 +138,7 @@ const Hero = () => {
                   lang === "ar"
                     ? "lg:flex-row-reverse md:flex-row-reverse sm:flex-col flex-col  items-start justify-center"
                     : ""
-                } xl:text-[35px] lg:text-[30px] md:text-[25px]  sm:text-[25px] text-[25px] leading-10 gap-1 md:gap-5 `}
+                } xl:text-[35px] lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] leading-10 gap-1 md:gap-5 `}
               >
                 <h2 className="text-[#000]">{info.number}</h2>
                 <h2>{info.title}</h2>

@@ -68,3 +68,9 @@ h1 {
 .hero{
   background-image: url();
 }
+.card-parent div{
+  padding-bottom: 0px !important;
+}
+.card-parent div{
+  padding-top: 15px !important;
+}

@@ -35,13 +35,13 @@ const AboutCeo = () => {
     <section className="mt-[50px]">
       <Title title={t("About Ceo Section Title")} />
       <div className="container ">
-        <div className="content mt-[50px] xl:flex-row lg:flex-col md:flex-col sm:flex-col flex-col gap-[50px]  flex items-start justify-center ">
-          <div className="left relative flex-1 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-[25px]">
+        <div className="content mt-[50px] xl:flex-row lg:flex-col items-center md:flex-col sm:flex-col flex-col gap-[50px]  flex  justify-center ">
+          <div className="left relative flex-1  grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-[25px]">
 
             {
               data[0]?.fields?.images?.map((img,index)=>{
                 return(
-                  <div key={index} className="img lg:h-[300px] md:h-[550px] sm:h-[350px] h-[350px] lg:w-[90%] md:w-[95%] sm:w-[95%] w-[95%] rounded-[30px] overflow-hidden">
+                  <div key={index} className="img lg:h-[300px] md:h-[550px] sm:h-[350px] h-[350px] lg:w-[90%] md:w-[100%] sm:w-[100%] w-[100%] rounded-[30px] overflow-hidden">
                   <img
                     src={"http:" + img?.fields?.file?.url}
                     alt=""

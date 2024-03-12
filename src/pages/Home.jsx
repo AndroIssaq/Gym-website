@@ -12,6 +12,7 @@ const Home = () => {
     <div>
       <Hero />
       <AboutCeo />
+      <Video />
       <Services />
       <div className="my-[50px]">
         <InfiniteMovingCardsDemo />
@@ -19,7 +20,7 @@ const Home = () => {
       <Features />
       <OurClasses />
       <Plans />
-      <Video />
+
     </div>
   );
 };

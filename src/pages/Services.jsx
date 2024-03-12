@@ -35,7 +35,7 @@ const Services = () => {
 
     function reverseArray(arr) {
       let reversedArr = [];
-      for (let i = arr.length - 1; i >= 0; i--) {
+      for (let i = arr.length-1; i >= 0; i--) {
           reversedArr.push(arr[i]);
       }
       return reversedArr;
@@ -47,14 +47,13 @@ const Services = () => {
         <div className="container flex items-center justify-center flex-col   ">
             {
                 reversedData.map((clas,index)=>{
-                  console.log(clas.fields.right);
                     return(
-                        <div key={index}  className={`flex  mt-[50px] mb-[50px] ${clas.fields.right===false ?  'xl:flex-row-reverse lg:flex-row-reverse flex-row-reverse' : 'xl:flex-row lg:flex-row flex-row'} md:flex-col sm:flex-col flex-col  w-full items-center justify-center gap-[50px]`}>
+                        <div key={index}  className={`flex  mt-[50px] mb-[50px] ${clas?.fields?.right===false ?  'xl:flex-row-reverse lg:flex-row-reverse flex-row-reverse' : 'xl:flex-row lg:flex-row flex-row'} md:flex-col sm:flex-col flex-col  w-full items-center justify-center gap-[50px]`}>
                         <div className="flex-[1] lg:h-[90vh] md:h-[80vh] sm:h-[60vh] h-[60vh]">
-                            <img src={"http:" + clas.fields?.img?.fields?.file?.url} alt="Weightlifting" className="h-full w-full rounded-md object-cover"/>
+                            <img src={"http:" + clas?.fields?.img?.fields?.file?.url} alt="Weightlifting" className="h-full w-full rounded-md object-cover"/>
                         </div>
                         <div className={`flex-[1] ${lang==='ar'&& 'items-end text-end'}   flex flex-col gap-[20px] `}>
-                        <span className='w-[40px] h-[40px] bg-[#fff] rounded-md text-center flex items-center text-[20px] font-extrabold justify-center text-mainColor'>{clas?.fields?.numberOfClassEn}</span>
+                      
                             <div className="flex items-center   gap-[20px]">
                                 <h1 className="text-5xl font-bold">
                                 {lang === "en"

@@ -75,7 +75,7 @@ const NavBar = () => {
           openMenu ? "fade-in" : "fade-out"
         }  absolute w-[100%]  flex items-center justify-center gap-[40px]`}
       >
-        <nav className=" w-[95%] p-[20px] bg-mainColor  rounded-2xl flex flex-col items-center justify-center gap-[40px]">
+        <nav className=" w-[95%] p-[30px] h-full bg-mainColor  rounded-2xl flex flex-col items-center justify-center gap-[40px]">
           <ul className="flex flex-col items-center justify-center gap-[40px] ">
             <Link
               to={"/"}

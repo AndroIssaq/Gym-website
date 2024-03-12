@@ -44,7 +44,7 @@ const OurClasses = () => {
             return (
               <CardContainer key={index} className="inter-var ">
                 <CardBody
-                  className={`bg-gray-50 py-[0px] relative card group/card xl:h-[88vh] lg:h-[50vh] md:h-[50vh] sm:h-[90vh] h-[83vh] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto  flex flex-col  ${
+                  className={`py-[0px] relative card group/card xl:h-[88vh] lg:h-[88vh] md:h-[88vh] sm:h-[90vh] h-[90vh] dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  bg-[#282727c2] border-black/[0.1] w-auto  flex flex-col  ${
                     lang === "ar" ? "items-end" : "items-start"
                   }  rounded-xl p-6 border  `}
                 >

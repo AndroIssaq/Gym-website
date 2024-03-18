@@ -44,7 +44,7 @@ const Footer = () => {
                 <ul className="mt-4 space-y-4 ">
                   <li className={`${lang==='ar'&&'text-right'}`}>
                     <h5 className=" leading-6 text-[25px] "> {t('Address')} <span className="mt-2 font-light  text-[20px] leading-6">
-                    : {t('Abu Dhabi Corniche in front of the Mall / Souq Tower. Floor first')}
+                    : {t('Abu DAHABI Opposite the world tread center mall Corniche site Al souq tower (shake tahnoon bin Mohamed building) first floor')}
                     </span></h5>  
                   </li>
                   <li className={`${lang==='ar'&&'text-right'}`}>

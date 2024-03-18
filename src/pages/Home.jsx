@@ -15,12 +15,12 @@ const Home = () => {
       <Hero />
       <AboutCeo />
       <Video video={video1}/>
-      <Video video={video2}/>
       <Services />
       <div className="my-[50px]">
         <SwiperImages/>
       </div>
       <Features />
+      <Video video={video2}/>
       <OurClasses />
 
       <Plans />

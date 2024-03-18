@@ -7,6 +7,7 @@ import { createClient } from "contentful";
 import { useTranslation } from "react-i18next";
 import Panner from '../components/Panner'
 import AboutCeo from "../components/AboutCeo";
+import SwiperImages from "../components/SwiperImages";
 const AboutUs = () => {
   const [data, setData] = useState([]);
   const client = createClient({
@@ -39,7 +40,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center gap-[50px]">
+      <main className="flex flex-col mb-[50px] items-center justify-center gap-[50px]">
       <Panner title={t('About Us')}/>
 
         <FlexComponent
@@ -67,7 +68,7 @@ const AboutUs = () => {
             lang === "en" ? data[0]?.fields?.desk2En : data[0]?.fields?.desk2Ar
           }`}
         />
-        <InfiniteMovingCardsDemo />
+        <SwiperImages/>
         <CoreValue />
 
 

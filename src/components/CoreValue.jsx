@@ -81,7 +81,7 @@ const CoreValue = () => {
     },
   ];
   return (
-    <div className="bg-secondColor text-white container rounded-xl xl:h-[60vh] lg:h-[60vh]">
+    <div className="bg-secondColor  text-white container rounded-xl xl:h-[60vh] lg:h-[60vh]">
       <div className="p-[20px] flex flex-col items-center justify-center h-full">
         <Title
           title={`${
@@ -90,7 +90,7 @@ const CoreValue = () => {
               : data[0]?.fields?.titleAr
           }`}
         />
-        <div className=" grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8  ">
+        <div className=" grid lg:grid-cols-4  md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8  ">
           {coreValues.map((coreValue, index) => {
             return (
               <div

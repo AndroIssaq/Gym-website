@@ -99,7 +99,7 @@ const OurClasses = () => {
                       as="button"
                       className=" flex-1 py-2 rounded-xl bg-mainColor text-[#fff] text-xs font-bold"
                     >
-                      <Link to={"/"}>
+                      <Link to={"/Classes"}>
                         {t("Our Classes Section show More Button")}
                       </Link>
                     </CardItem>

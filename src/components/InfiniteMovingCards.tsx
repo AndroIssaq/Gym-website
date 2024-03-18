@@ -69,29 +69,12 @@ export function InfiniteMovingCardsDemo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const testimonials = [
-  //   {
-  //     img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
-  //   },
-  //   {
-  //     img: `${data[0]?.fields?.img2?.fields?.file?.url}`,
-  //   },
-  //   {
-  //     img: `${data[0]?.fields?.img3?.fields?.file?.url}`,
-  //   },
-  //   {
-  //     img: `${data[0]?.fields?.img4?.fields?.file?.url}`,
-  //   },
-  //   {
-  //     img: `${data[0]?.fields?.img5?.fields?.file?.url}`,
-  //   },
-  //   {
-  //     img: `${data[0]?.fields?.img1?.fields?.file?.url}`,
-  //   },
-  // ];
+  const images = data[0]?.fields?.img;
+
+  
   return (
     <div className=" rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={data} direction="left" speed="slow" />
+      <InfiniteMovingCards items={images} direction="left" speed="fast" />
     </div>
   );
 }

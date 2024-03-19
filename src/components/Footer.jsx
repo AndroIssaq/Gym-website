@@ -25,12 +25,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <h1 className="text-[35px]">
+            <h1 className="text-[55px]">
               <Link to={"/"}>
-                world <span className="text-white text-[35px]">gym</span>
+                world <span className="text-white text-[55px]">gym</span>
               </Link>
             </h1>
-            <p className=" text-[25px] leading-6">
+            <p className=" text-[40px] leading-[50px]">
              {t('Your Path to a Healthier Lifestyle and Greater Well-being')}
             </p>
             <div className="flex space-x-6"></div>
@@ -38,23 +38,23 @@ const Footer = () => {
           <div className="mt-12 grid grid-cols-1 gap-8 xl:mt-0 xl:col-span-2">
             <div className={`${lang==='ar'&&'text-right'} md:grid md:grid-cols-2 md:gap-8`}>
               <div>
-                <h4 className=" text-[35px] font-semibold tracking-wider text-mainColor  uppercase">
+                <h4 className=" text-[55px] font-semibold tracking-wider text-mainColor  uppercase">
                 {t('CONTACT')}
                 </h4>
                 <ul className="mt-4 space-y-4 ">
                   <li className={`${lang==='ar'&&'text-right'}`}>
-                    <h5 className=" leading-6 text-[25px] "> {t('Address')} <span className="mt-2 font-light  text-[20px] leading-6">
+                    <h5 className=" leading-[50px] text-[40px] "> {t('Address')} <span className="mt-2 font-light  text-[35px] leading-[50px]">
                     : {t('Abu DAHABI Opposite the world tread center mall Corniche site Al souq tower (shake tahnoon bin Mohamed building) first floor')}
                     </span></h5>  
                   </li>
                   <li className={`${lang==='ar'&&'text-right'}`}>
-                    <h5 className="text-[25px] leading-6">{t('Phone')} <span className="mt-2 text-[20px] leading-6">
+                    <h5 className="text-[40px] leading-[50px]">{t('Phone')} <span className="mt-2 text-[35px] leading-[50px]">
                     : 026220202
                     </span></h5>
                     
                   </li>
                   <li className={`${lang==='ar'&&'text-right'}`}>
-                    <h5 className="text-[25px] leading-6">{t('Mail Address')}  </h5> <span className="mt-2 text-[20px] leading-6">
+                    <h5 className="text-[40px] leading-[50px]">{t('Mail Address')}  </h5> <span className="mt-2 text-[35px] leading-[50px]">
                       : info@worldgym.com
                     </span>
                    
@@ -62,13 +62,13 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="md:mt-0">
-                <h4 className="text-[35px]  font-semibold tracking-wider text-mainColor uppercase">
+                <h4 className="text-[55px]  font-semibold tracking-wider text-mainColor uppercase">
                 {t('QUICK LINKS')}
                 </h4>
                 <ul className="mt-4 space-y-4">
                   <li className={`${lang==='ar'&&'text-right'}`}>
                     <a
-                      className="text-[25px] leading-6 hover:text-mainColor"
+                      className="text-[40px] leading-[50px] hover:text-mainColor"
                       href="#"
                     >
                       <Link to={"/"}> {t('Home')}</Link>
@@ -76,7 +76,7 @@ const Footer = () => {
                   </li>
                   <li className={`${lang==='ar'&&'text-right'}`}>
                     <a
-                      className="text-[25px] leading-6 hover:text-mainColor"
+                      className="text-[40px] leading-[50px] hover:text-mainColor"
                       href="#"
                     >
                       <Link to={"/Classes"}> {t('Classes')}</Link>
@@ -84,7 +84,7 @@ const Footer = () => {
                   </li  >
                   <li className={`${lang==='ar'&&'text-right'}`}>
                     <a
-                      className="text-[25px] leading-6 hover:text-mainColor"
+                      className="text-[40px] leading-[50px] hover:text-mainColor"
                       href="#"
                     >
                       <Link to={"/AboutUs"}> {t('About Us')}</Link>
@@ -92,7 +92,7 @@ const Footer = () => {
                   </li>
                   <li className={`${lang==='ar'&&'text-right'}`}>
                     <a
-                      className="text-[25px] leading-6 hover:text-mainColor"
+                      className="text-[40px] leading-[50px] hover:text-mainColor"
                       href="#"
                     >
                       <Link to={"/ContactUs"}> {t('ContactUs')}</Link>
@@ -118,7 +118,7 @@ const Footer = () => {
               <FaInstagramSquare className="h-6 w-6" />
             </a>
           </div>
-          <p className="mt-8 text-[25px] leading-6 text-gray-400 md:mt-0 md:order-1">
+          <p className="mt-8 text-[40px] leading-[50px] text-gray-400 md:mt-0 md:order-1">
             © {year} WorldGym. All rights reserved.
           </p>
         </div>
